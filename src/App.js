@@ -1,26 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Footer from './Footer/Footer';
+import Header from './Header/Header';
+import Rate from './Rate/Rate';
+import About from './About/About'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Contacts from './Contacts/Contacts';
+
+
+class App extends React.Component {
+  // constructor(props){
+  //   super(props);
+  // }
+  render(){ 
+  return ( 
+    <Router>
+      <div className='site'>
+        <Header/>
+        
+        <div className='container'>
+          <main>
+            
+            <Switch>
+              <Route exact path='/' component={Rate}/>
+              <Route exact path='/about' component={About}/>
+              <Route exact path='/contacts' component={Contacts}/>
+            </Switch>
+            
+          </main>
+        </div>
+
+        <div className='container' id='cookie-info'>
+          <div className='site-container'>
+            <div className='well'> На нашем сайте мы используем cookie для сбора информации технического характера.<br/>В частности, для персонифицирования работы сайта мы обрабатываем IP-адрес региона вашего местоположения. &nbsp;<button className= 'btn btn-primary btn-sm'>ОК</button></div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+      </Router>
   );
+  }
 }
 
 export default App;
