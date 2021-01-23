@@ -16,7 +16,6 @@ class Calc extends React.Component {
 
   calcRate = (e) => {
     e.preventDefault();
-    console.log('work');
     let elements = e.target.elements;
     let countCurrency = elements['count-currency'].value;
     let typeCurrency = elements['type-currency'].value;

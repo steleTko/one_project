@@ -4,9 +4,6 @@ import './Header.css';
 
 
 class Header extends React.Component {
-  // constructor(props){
-  //   super(props);
-  // }
   render(){ 
   return (<header>
           <div className='top-bar animate-dropdown'></div>

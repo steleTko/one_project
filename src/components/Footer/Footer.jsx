@@ -4,16 +4,13 @@ import './Footer.css';
 
 
 class Footer extends React.Component {
-  // constructor(props){
-  //   super(props);
-  // }
   render(){ 
   return (        <footer id='footer' className='footer'>
   <div className='footer-bottom'>
     <div className='container'>
       <div className='flex-container'>
         <div className='flex-item'>
-          <h1 className='footer-title'><Link to ='/'>2019 &copy; React. Lite Level</Link></h1>
+          <h1 className='footer-title'><Link to ='/'>2019 &copy; React project</Link></h1>
           <p>All Rights Reserved</p>
         </div>
         <div className='flex-item'>
